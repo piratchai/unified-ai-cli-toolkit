@@ -1,0 +1,26 @@
+{
+  "model": "gemini-2.5-pro",
+  "toolPermission": "request-review",
+  "sandbox": {
+    "enabled": true,
+    "allowNetwork": false,
+    "isolatedWorkspace": true
+  },
+  "statusLine": {
+    "command": "node ./scripts/statusline.js"
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "bash|powershell|cmd",
+        "command": "node ./hooks/pre-tool-use.js"
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "write_to_file|replace_file_content",
+        "command": "node ./hooks/post-tool-use.js"
+      }
+    ]
+  }
+}

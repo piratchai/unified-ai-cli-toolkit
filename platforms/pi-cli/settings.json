@@ -1,0 +1,15 @@
+{
+  "defaultModel": "claude-3-7-sonnet",
+  "thinking": {
+    "budgetTokens": 4096
+  },
+  "compaction": {
+    "enabled": true,
+    "reserveTokens": 8192
+  },
+  "scopedModels": {
+    "bash": "claude-3-5-haiku",
+    "grep": "claude-3-5-haiku",
+    "design": "claude-3-7-sonnet"
+  }
+}

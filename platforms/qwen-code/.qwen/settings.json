@@ -1,0 +1,37 @@
+{
+  "model": "qwen2.5-coder-32b-instruct",
+  "approvalMode": "default",
+  "worktree": true,
+  "lsp": {
+    "typescript": {
+      "command": "typescript-language-server",
+      "args": [
+        "--stdio"
+      ]
+    },
+    "python": {
+      "command": "pyright-langserver",
+      "args": [
+        "--stdio"
+      ]
+    }
+  },
+  "channels": {
+    "telegram": {
+      "enabled": false,
+      "botToken": "ENV:TELEGRAM_BOT_TOKEN"
+    },
+    "feishu": {
+      "enabled": false,
+      "appId": "ENV:FEISHU_APP_ID"
+    }
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "bash",
+        "command": "./.qwen/hooks/pre-tool-use.sh"
+      }
+    ]
+  }
+}

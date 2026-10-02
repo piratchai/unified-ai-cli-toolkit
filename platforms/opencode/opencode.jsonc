@@ -1,0 +1,22 @@
+// OpenCode Configuration File
+{
+  "$schema": "https://opencode.ai/schema/v2/config.json",
+  "defaultAgent": "build",
+  "permissions": [
+    {
+      "action": "write",
+      "resource": ".env*",
+      "effect": "deny"
+    },
+    {
+      "action": "execute",
+      "resource": "rm -rf *",
+      "effect": "ask"
+    },
+    {
+      "action": "*",
+      "resource": "src/**",
+      "effect": "allow"
+    }
+  ]
+}

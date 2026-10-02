@@ -1,0 +1,19 @@
+{
+  "$schema": "https://kilo.ai/schema/config.json",
+  "activeAgent": "code",
+  "gateway": {
+    "enabled": true,
+    "defaultProvider": "anthropic",
+    "timeoutMs": 60000
+  },
+  "caffeinate": true,
+  "privacy": {
+    "maskSecrets": true,
+    "redactKeys": [
+      "API_KEY",
+      "SECRET",
+      "PASSWORD",
+      "TOKEN"
+    ]
+  }
+}

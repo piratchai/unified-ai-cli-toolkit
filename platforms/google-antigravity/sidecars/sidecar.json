@@ -1,0 +1,14 @@
+{
+  "services": [
+    {
+      "name": "mock-api-sidecar",
+      "command": "node",
+      "args": [
+        "-e",
+        "require('http').createServer((req,res)=>{res.end('{\"status\":\"ok\"}')}).listen(4001)"
+      ],
+      "port": 4001,
+      "healthCheck": "http://localhost:4001/health"
+    }
+  ]
+}

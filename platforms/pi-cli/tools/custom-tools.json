@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "local-db": {
+      "command": "node",
+      "args": [
+        "./tools/sqlite-mcp.js"
+      ]
+    }
+  }
+}
